@@ -8,8 +8,7 @@
     ],
     "routes": [
       {
-        "src": "/api/contact",
-        "methods": ["POST"],
+        "src": "/api/(.*)",
         "dest": "api/contact.js"
       }
     ]
