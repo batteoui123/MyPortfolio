@@ -27,11 +27,16 @@ contactEmail.verify((error) => {
   }
 });
 
-// Routes
+// Health check (required for Render)
+app.get('/health', (req, res) => res.sendStatus(200));
+
+// Contact route
 app.post("/api/contact", (req, res) => {
-  const name = req.body.firstName + " " + req.body.lastName;
-  const email = req.body.email;
-  const message = req.body.message;
+  if (!req.body.name || !req.body.email || !req.body.message) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+
+  const { name, email, message } = req.body;
   
   const mail = {
     from: name,
@@ -45,12 +50,13 @@ app.post("/api/contact", (req, res) => {
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       console.error("Send mail error:", error);
-      res.status(500).json({ status: "Error", error: error });
+      res.status(500).json({ status: "Error", error: error.message });
     } else {
-      res.status(200).json({ code: 200, status: "Message Sent" });
+      res.status(200).json({ status: "Message Sent" });
     }
   });
 });
 
-// Export for Vercel
-module.exports = app;
+// Start server (Render will set PORT)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
