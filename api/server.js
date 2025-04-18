@@ -1,7 +1,5 @@
 
-// import express from 'express';
-// import cors from 'cors';
-// import nodemailer from 'nodemailer';
+
 require('dotenv').config();  // Si vous utilisez '.env'
 const express = require("express");
 const router = express.Router();
@@ -41,7 +39,7 @@ router.post("/contact", (req, res) => {
   const message = req.body.message;
   const mail = {
     from: name,
-    to: "batiwioussama527@gmail.com",
+    to: process.env.EMAIL_USER,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
