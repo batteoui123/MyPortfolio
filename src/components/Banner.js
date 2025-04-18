@@ -88,7 +88,7 @@ export const Banner = () => {
                           style={{ marginBottom: "20px" }}
                         />
                       </span>{" "}
-                      Hi! , i'm :{" "}
+                      Hi! , i'm :{" "}hhhhgit
                     </h3>
                     <h1>{`EL-BATTEOUI OUSSAMA`} </h1>
                     <h2>
