@@ -10,7 +10,7 @@ const contactEmail = nodemailer.createTransport({
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { name, email, message, phone } = req.body;
+    const { name, email, message} = req.body;
 
     const mailOptions = {
       from: name,
@@ -19,7 +19,6 @@ export default async function handler(req, res) {
       html: `
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
-        <p>Phone: ${phone}</p>
         <p>Message: ${message}</p>
       `,
     };
