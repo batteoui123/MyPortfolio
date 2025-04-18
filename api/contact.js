@@ -1,35 +1,53 @@
+require('dotenv').config();
+
+const express = require("express");
+const router = express.Router();
+const cors = require("cors");
 const nodemailer = require("nodemailer");
+
+// server used to send send emails
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
+app.listen(5000, () => console.log("Server Running"));
+console.log(process.env.EMAIL_USER);
+console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,  // Ensure EMAIL_USER is in your Vercel environment variables
-    pass: process.env.EMAIL_PASS,  // Ensure EMAIL_PASS is in your Vercel environment variables
+    user:process.env.EMAIL_USER,
+    pass:process.env.EMAIL_PASS
   },
 });
 
-export default async function handler(req, res) {
-  if (req.method === "POST") {
-    const { name, email, message} = req.body;
-
-    const mailOptions = {
-      from: name,
-      to: process.env.EMAIL_USER,  // Replace with your email
-      subject: "Contact Form Submission - Portfolio",
-      html: `
-        <p>Name: ${name}</p>
-        <p>Email: ${email}</p>
-        <p>Message: ${message}</p>
-      `,
-    };
-
-    try {
-      await contactEmail.sendMail(mailOptions);
-      return res.status(200).json({ status: "Message Sent" });
-    } catch (error) {
-      return res.status(500).json({ error: "Something went wrong" });
-    }
+contactEmail.verify((error) => {
+  if (error) {
+    console.log(error);
   } else {
-    return res.status(405).json({ error: "Method Not Allowed" });
+    console.log("Ready to Send");
   }
-}
+});
+
+router.post("/contact", (req, res) => {
+  const name = req.body.firstName + req.body.lastName;
+  const email = req.body.email;
+  const message = req.body.message;
+  const mail = {
+    from: name,
+    to:process.env.EMAIL_USER,
+    subject: "Contact Form Submission - Portfolio",
+    html: `<p>Name: ${name}</p>
+           <p>Email: ${email}</p>
+        
+           <p>Message: ${message}</p>`,
+  };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      res.json(error);
+    } else {
+      res.json({ code: 200, status: "Message Sent" });
+    }
+  });
+});
