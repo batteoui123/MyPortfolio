@@ -1,55 +1,36 @@
-
-
-require('dotenv').config();  // Si vous utilisez '.env'
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
 const nodemailer = require("nodemailer");
-
-// server used to send send emails
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running from oussama"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,  // Email dans le fichier .env ou config.env
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER,  // Ensure EMAIL_USER is in your Vercel environment variables
+    pass: process.env.EMAIL_PASS,  // Ensure EMAIL_PASS is in your Vercel environment variables
   },
 });
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
+export default async function handler(req, res) {
+  if (req.method === "POST") {
+    const { name, email, message, phone } = req.body;
 
-router.post("/contact", (req, res) => {
-  console.log(req)
+    const mailOptions = {
+      from: name,
+      to: process.env.EMAIL_USER,  // Replace with your email
+      subject: "Contact Form Submission - Portfolio",
+      html: `
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Phone: ${phone}</p>
+        <p>Message: ${message}</p>
+      `,
+    };
 
-  const name = req.body.name ;
-  const email = req.body.email;
-  const message = req.body.message;
-  const mail = {
-    from: name,
-    to: process.env.EMAIL_USER,
-    subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error) => {
-    if (error) {
-      res.json(error);
-    } else {
-      res.json({ code: 200, status: "Message Sent" });
+    try {
+      await contactEmail.sendMail(mailOptions);
+      return res.status(200).json({ status: "Message Sent" });
+    } catch (error) {
+      return res.status(500).json({ error: "Something went wrong" });
     }
-  });
-});
+  } else {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+}
