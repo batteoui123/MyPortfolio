@@ -1,9 +1,0 @@
-{
-    "scripts": {
-      "start": "node contact.js"
-    },
-    "dependencies": {
-      "express": "^4.18.2",
-      "nodemailer": "^6.9.1"
-    }
-  }
