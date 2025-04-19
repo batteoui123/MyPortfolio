@@ -48,27 +48,27 @@ export const Projects = () => {
   
     {   
       title: "Freelance Service Marketplace",
-      description: "As a backend developer, I contributed to building a platform connecting clients with freelance service providers, featuring service management, AI recommendations, messaging, ratings, and real-time notification",
+      description: "Backend developer in a freelance service platform enabling smart matching, messaging, and real-time notifications.",
       imgUrl: projImg1,
       technologies:[spring,tailwind,next,postgre,groq,]
     },
     {
       
       title: "School Management System ",
-      description: "A JavaFX application for managing school operations, including student, teacher, module, and enrollment management, along with an intuitive dashboard and role-based access control",
+      description: "JavaFX-based school management app with dashboards, role-based access, and student, teacher, and module tracking.",
       imgUrl: projImg2,
       technologies:[javaFx,postgre,css]
     },
     {  
       title: "Children's Activity Management Platform",
-      description: "As a backend developer, I helped build a platform for managing children's activities, allowing administrators, animators, and parents to handle registrations, schedules, notifications, and activities.",
+      description: "Backend developer in a platform for managing children’s activities, enabling registration, scheduling, and notifications for all roles",
       imgUrl: projImg3,
       technologies:[laravel,postgre,vuejs,tailwind]
     },
     {
       
       title: "Medical Appointment and Records Management",
-      description: "As a backend developer, I contributed to building a centralized platform for managing medical appointments and patient records, enabling secure online booking, cancellations, and access to medical files for patients, doctors, and administrators.",
+      description: "Backend developer for a children’s activity platform, enabling role-based registration, scheduling, and notifications.",
       imgUrl: projImg4,
       technologies:[spring,postgre,angular]
     },
@@ -90,10 +90,7 @@ export const Projects = () => {
                   
                   <p className="desc1">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    typesetting industry.
                   </p>
 
                   <div className=" d-flex flex-wrap  justify-content-around

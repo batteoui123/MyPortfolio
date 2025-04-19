@@ -6,9 +6,11 @@ import lycee from "../assets/img/lycee.jpg";
 import { Accordion } from "react-bootstrap";
 
 const Education = () => {
+  const isMobile = window.innerWidth <= 576;
+
     const educationData = [
         { 
-          year: "September 2023 - Present",
+          year: "2023 - Present",
           title: "Engineering cycle in Computer Science",
           description:
             "Currently pursuing my Software Engineering degree at the  National School of Applied Sciences  of Tangier (ENSAT).",
@@ -39,57 +41,65 @@ const Education = () => {
 
   return (
       <section className="education" id="education" >
-         <h2 className="mb-5 pt-5">Education</h2>
+         <h2 className="title">Education</h2>
          
-            <div className="container education-timeline">
-
-            <div className="timeline ms-5">
-                      {educationData.map((item,key) =>   (
-                       
-                      
-                          <motion.div
-                          
-                              className="timeline-item"
-
-                              initial={{ x: "-30vw" }}
-                              whileInView={{ x: "0vw" }}
-                              transition={{ duration: 0.6 }}
-
-                               >
-
-                              <div className="timeline-dot  "></div>
-                              <div className="timeline-content row d-flex align-items-center   ">
-                            <motion.div className="col-9" 
-                            whileHover={{scale:1.07}}
-                            
-                            >
-
-                              <h3>{item.year}</h3>
-                              <Accordion defaultActiveKey="0" >
-                                <Accordion.Item eventKey={key}  >
-                                  <Accordion.Header className="accordion-header" ><h4>{item.title}</h4></Accordion.Header>
-                                  <Accordion.Body className="accordion-body"> <p>{item.description}</p>  </Accordion.Body>
-                                </Accordion.Item>
-                              </Accordion>
-
-
-
-                            </motion.div>
-                            <div className="col-3 bg-dange text-center bg-succes">
-                              <a href=""><img src={item.img} style={{ width: '100px' }} className="rounded-pill" ></img></a>
-                            </div>
-
-                          </div>
-
-
-                          </motion.div>
-                      )  )}
-
-                  
-                  </div>
-                  
-           
+         <div className="container education-timeline">
+  {!isMobile ? (
+    <div className="timeline">
+      {educationData.map((item, key) => (
+        <motion.div
+          className="timeline-item"
+          key={key}
+          initial={{ x: "-30vw" }}
+          whileInView={{ x: "0vw" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="timeline-dot" />
+          <div className="timeline-content row d-flex align-items-center">
+            <motion.div className="col-9" whileHover={{ scale: 1.07 }}>
+              <h3>{item.year}</h3>
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey={key}>
+                  <Accordion.Header className="accordion-header">
+                    <h4>{item.title}</h4>
+                  </Accordion.Header>
+                  <Accordion.Body className="accordion-body">
+                    <p>{item.description}</p>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </motion.div>
+            <div className="col-3 logoschol text-center">
+              <img src={item.img} className="rounded-pill" />
             </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  ) : (
+    <div className="timeline-mobile container-fluid">
+      {educationData.map((item, key) => (
+        <motion.div
+          className="timeline-item-mobile"
+          key={key}
+          initial={{ x: "-30vw" }}
+          whileInView={{ x: "0vw" }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="timeline-dot" />
+          <div className="timeline-content-mobile">
+            <div className="timeline-header-mobile d-flex justify-content-between align-items-center">
+              <h4 className="year">{item.year}</h4>
+              <img src={item.img} className="school-logo-mobile rounded-pill" />
+            </div>
+            <p className="edu-title">{item.title}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  )}
+</div>
+
 
 
 

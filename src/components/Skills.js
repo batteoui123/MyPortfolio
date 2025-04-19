@@ -92,8 +92,8 @@ const resetValue = (targetName) => {
             whileInView={{ x: "0vw" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="skill-title mb-5">Programming Languages</h3>
-            <div className="skills-list  ms-5 ">
+            <h3 className="skill-title">Programming Languages</h3>
+            <div className="skills-list   ">
              
               <div className="skill-item ">
                 <img src={c} />
@@ -112,7 +112,7 @@ const resetValue = (targetName) => {
                 <p>JavaScript</p>
               </div>
               <div className="skill-item ">
-                <img src={php}  style={{width:'50px'}}  />
+                <img src={php}  />
                 <p>php</p>
               </div>
               <div className="skill-item ">
@@ -128,8 +128,8 @@ const resetValue = (targetName) => {
             whileInView={{ x: "0vw" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="skill-title mb-5">Frameworks & Libraries</h3>
-            <div className="skills-list  ms-5 ">
+            <h3 className="skill-title ">Frameworks & Libraries</h3>
+            <div className="skills-list  ">
               <div className="skill-item ">
                 <img src={spring} />
                 <p>Spring boot</p>
@@ -163,8 +163,8 @@ const resetValue = (targetName) => {
             whileInView={{ x: "0vw" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="skill-title mb-5">DataBases</h3>
-            <div className="skills-list  ms-5 ">
+            <h3 className="skill-title">DataBases</h3>
+            <div className="skills-list  ">
               <motion.div
                 className="skill-item "
                 
@@ -177,7 +177,7 @@ const resetValue = (targetName) => {
                
               
               >
-                <img src={postgre} style={{ width: "70px", height: "40px" }} />
+                <img src={postgre} />
                 <p>postgre</p>
               </motion.div>
               <motion.div className="skill-item " 
@@ -189,11 +189,11 @@ const resetValue = (targetName) => {
                 <p>Oracle</p>
               </motion.div>
               <div className="skill-item ">
-                <img src={plsql} style={{ height: "40px" }} />
+                <img src={plsql}  />
                 <p>PL/SQL</p>
               </div>
               <div className="skill-item ">
-                <img src={nosql} style={{ height: "40px" }} />
+                <img src={nosql} />
                 <p>Nosql</p>
               </div>
             </div>
@@ -205,8 +205,8 @@ const resetValue = (targetName) => {
             whileInView={{ x: "0vw" }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="skill-title mb-5">Tools & technologies</h3>
-            <div className="skills-list  ms-5 ">
+            <h3 className="skill-title">Tools & technologies</h3>
+            <div className="skills-list ">
               <div className="skill-item ">
                 <img src={git} />
                 <p>Git</p>
@@ -278,67 +278,72 @@ const resetValue = (targetName) => {
             transition={{ duration: 0.6 }}
             
           >
-            <h3 className="skill-title mb-5">Languages</h3>
-            <div className="skills-list  ms-5 ">
-              <div className="skill-item1 mx-5" style={{width:'50px'}}>
+            <h3 className="skill-title ">Languages</h3>
+            <div className="skills-list prog">
+              
+
+
+
+       
+              <div className="skill-item-prog">
                 <motion.div
-                  className="text-center mb-3 "
-                  style={{ width: "60px" }}
+                  className="text-center mb-3 circle-prog  "
+                 
                   onViewportEnter={() => onViewPort("fr")}
                   onViewportLeave={() => resetValue("fr")}
-                  whileHover={{scale:1.3}}
+                   whileHover={{scale:1.2}}
                 >
                   <CircularProgressbar
                     value={values.fr}
                     text={`${values.fr}%`}
                     styles={buildStyles({
-                      textColor: "#007bff",
-                      pathColor: "#007bff",
+                      textColor: "#36e617",
+                      pathColor: "#36e617",
                       trailColor: "#d6d6d6",
-                      textSize: "23px",
+                    
                       pathTransitionDuration: 0.3,
                     })}
                   />
                 </motion.div>
 
-                <div className="skill-item1 d-flex align-items-center ms-2">
+                <div className="skill-item3 d-flex align-items-center ms-2">
                   <img src={french} className="me-3" />
                   <span className=" text-center">French</span>
                 </div>
               </div>
-              <div className="skill-item2 mx-5" style={{width:'50px'}}>
+              <div className="skill-item-prog">
                 <motion.div
-                  className="text-center mb-3 "
-                  style={{ width: "0px" }}
+                  className="text-center mb-3 circle-prog "
+                  
                   onViewportEnter={() => onViewPort("eng")}
                   onViewportLeave={() => resetValue("eng")}
-                  whileHover={{scale:1.3}}
+                   whileHover={{scale:1.2}}
                 >
                   <CircularProgressbar
                     value={values.eng}
                     text={`${values.eng}%`}
                     styles={buildStyles({
                       textColor: "#36e617",
-                      textColor: "#28a745",
-                      pathColor: "#28a745",
-                      textSize: "23px",
+                      pathColor: "#36e617",
+                      trailColor: "#d6d6d6",
+                     
                       pathTransitionDuration: 0.3,
                     })}
                   />
                 </motion.div>
 
-                <div className="skill-item2 d-flex align-items-center ms-2">
+                <div className="skill-item3 d-flex align-items-center ms-2">
                   <img src={english} className="me-3" />
                   <span className=" text-center">English</span>
                 </div>
               </div>
-              <div className="skill-item3 mx-5" style={{width:'50px'}}>
+              <div className="skill-item-prog">
                 <motion.div
-                  className="text-center mb-3 "
-                  style={{ width: "60px" }}
+                  className="text-center mb-3 circle-prog"
+                  
                   onViewportEnter={() => onViewPort("arab")}
                   onViewportLeave={() => resetValue("arab")}
-                   whileHover={{scale:1.3}}
+                   whileHover={{scale:1.2}}
                 >
                   <CircularProgressbar
                     value={values.arab}
@@ -347,7 +352,7 @@ const resetValue = (targetName) => {
                       textColor: "#36e617",
                       pathColor: "#36e617",
                       trailColor: "#d6d6d6",
-                      textSize: "23px",
+                     
                       pathTransitionDuration: 0.3,
                     })}
                   />
@@ -358,6 +363,7 @@ const resetValue = (targetName) => {
                   <span className=" text-center">Arabic</span>
                 </div>
               </div>
+              
             </div>
           </motion.div>
         </div>

@@ -66,18 +66,6 @@ export const NavBar = () => {
               <motion.span initial={triggerAnimation?{  opacity:0  }:{}}  animate={triggerAnimation?{  opacity:1  }:{}}  transition={{ duration: 1, delay: 0.6 }} >a</motion.span>
               <motion.span initial={triggerAnimation?{  opacity:0  }:{}}  animate={triggerAnimation?{  opacity:1  }:{}}  transition={{ duration: 1, delay: 0.8 }} >m</motion.span>
               <motion.span initial={triggerAnimation?{  opacity:0  }:{}}  animate={triggerAnimation?{  opacity:1  }:{}}  transition={{ duration: 1, delay: 1 }} >a</motion.span>
- 
-                 
-                 
-                
-             
-        
-            
-
-
-
-          
-             
            
               </span>
           
@@ -94,7 +82,7 @@ export const NavBar = () => {
           </button>
 
           <div className="collapse navbar-collapse justify-content-end"  id="navbarNav">
-            <ul className="navbar-nav ">
+            <ul className="navbar-nav " style={{background:'bod'}}>
 
               <motion.li className="nav-item">   
                 <motion.a

@@ -92,23 +92,23 @@ export const Contact = () => {
             >
               <div className="contactMe">
                 <div className="CMcard">
-                  <div className="mb-3">
-                    <FaEnvelope size={30} color="#0b76a8" />{" "}
-                    <span className="btn btn-secondary rounded-pill ms-2" style={{width:'300px',background:'none',cursor:'text',userSelect:'text'}} >elbatteoui.oussama@etu.uae.ac.ma</span>
+                  <div className="mb-3 ">
+                    <FaEnvelope color="#0b76a8" className="fav1" />{" "}
+                    <span className="btn btn-secondary rounded-pill ms-2"  >elbatteoui.oussama@etu.uae.ac.ma</span>
                   </div>
                 </div>
 
                 <div className="CMcard">
                   <div className="mb-3">
-                    <FaWhatsapp size={30} color="#25D366" />{" "}
-                    <span className="btn btn-secondary rounded-pill ms-2" style={{width:'300px',background:'none',cursor:'text',userSelect:'text'}} >+212 654-579050</span>
+                    <FaWhatsapp color="#25D366" className="fav1" />{" "}
+                    <span className="btn btn-secondary rounded-pill ms-2"  >+212 654-579050</span>
                   </div>
                 </div>
 
                 <div className="CMcard">
                   <div className="mb-3">
-                    <FaLocationArrow size={30} color="blue" />{" "}
-                    <span className="btn btn-secondary rounded-pill ms-2" style={{width:'300px',background:'none',cursor:'text',userSelect:'text'}} >Tangier, Morocco</span>
+                    <FaLocationArrow color="blue"  className="fav1"/>{" "}
+                    <span className="btn btn-secondary rounded-pill ms-2" >Tangier, Morocco</span>
                   </div>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export const Contact = () => {
                   whileInView={{ x: "0vw" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h3>Get In Touch</h3>
+                  <h3 className="getouch">Get In Touch</h3>
                   <form onSubmit={handleSubmit} className="bg-dange ms-4">
                     <Row>
                       <Col size={12} sm={12} className="px-1 my-3">
@@ -150,8 +150,8 @@ export const Contact = () => {
                           placeholder="Message"
                           onChange={(e) => onFormUpdate("message", e.target.value)}
                         ></textarea>
-                        <div className="d-flex bg-dange gap-5 align-items-center ">
-                           <button type="submit text-center  " className="">
+                        <div className="d-flex bg-dange gap-5 align-items-center mybtn ">
+                           <button type="submit text-center send " className="">
                                <span>{buttonText}</span>
                            </button>
                        

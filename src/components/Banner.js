@@ -67,10 +67,10 @@ export const Banner = () => {
 
   return (
     <>
-      <section className="banner" id="home">
-        <Container>
+      <section className="banner bg-succes" id="home">
+        <Container className="bg-dange align-items-center">
           <Row className="aligh-items-center">
-            <Col xs={15} md={6} xl={8} className="bg-">
+            <Col xs={12} md={6} xl={7} className="first-cl">
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div
@@ -80,7 +80,7 @@ export const Banner = () => {
                   >
                     {/* <span className="tagline">Welcome to my Portfolio</span> */}
 
-                    <h3 className="" style={{ color: "#9f55ff" }}>
+                    <h3 className="gretting" style={{ color: "#9f55ff" }}>
                       <span className="me-3 hi">
                         <FaHandsClapping
                           size={40}
@@ -88,9 +88,9 @@ export const Banner = () => {
                           style={{ marginBottom: "20px" }}
                         />
                       </span>{" "}
-                      Hi! , i'm :{" "}hhhhgit
+                      Hi! , i'm :{" "}
                     </h3>
-                    <h1>{`EL-BATTEOUI OUSSAMA`} </h1>
+                    <h1 className="myname">{`EL-BATTEOUI OUSSAMA`} </h1>
                     <h2>
                       <span
                         className="txt-rotate"
@@ -128,7 +128,7 @@ export const Banner = () => {
                       grow professionally 🌱.
                     </p>
 
-                    <div className="d-flex justify-content-start ">
+                    <div className="d-flex justify-content-start  ">
                       <a href={"#contact"} style={{ textDecoration: "none" }}>
                         <motion.button
                           className="btn1 justify-content-center me-3"
@@ -191,8 +191,8 @@ export const Banner = () => {
               </div>
             </Col>
 
-            <Col xs={12} md={6} xl={4} className="bg-inf">
-              <TrackVisibility>
+            <Col xs={12} md={6} xl={5} className="bg-inf">
+              <TrackVisibility className="track">
                 {({ isVisible }) => (
                   <div
                     className={
