@@ -13,13 +13,13 @@ function App() {
   return (
     <div className="App">
       <NavBar />   
-      <Banner  />
+      {/* <Banner  />
       <Skills />
       <Education/>
       <Projects />
-      <Contact />
+      <Contact /> */}
     
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
