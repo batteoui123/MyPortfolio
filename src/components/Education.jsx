@@ -43,7 +43,7 @@ const Education = () => {
       <section className="education" id="education" >
          <h2 className="title">Education</h2>
          
-         <div className="container-fluid education-timeline">
+         <div className="container education-timeline">
   {!isMobile ? (
     <div className="timeline">
       {educationData.map((item, key) => (

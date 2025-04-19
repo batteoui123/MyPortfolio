@@ -181,7 +181,13 @@ export const Contact = () => {
 <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <motion.div className={isVisible ? "animate__animated animate__fadeIn" : ""} 
+                  initial={{ x: "30vw" }}
+                whileInView={{ x: "0vw" }}
+                transition={{ duration: 0.6 }}
+                
+                
+                >
                 <h2>Get In Touch</h2>
                 <form onSubmit={handleSubmit}>
                   <Row>
@@ -223,7 +229,7 @@ export const Contact = () => {
                       </Col>
                   </Row>
                 </form>
-              </div>}
+              </motion.div>}
             </TrackVisibility>
           </Col>
         </Row>

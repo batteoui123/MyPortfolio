@@ -1,62 +1,51 @@
 require('dotenv').config();
 const express = require("express");
+const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
+// server used to send send emails
 const app = express();
-
-// Middleware
 app.use(cors());
 app.use(express.json());
+app.use("/", router);
+app.listen(5000, () => console.log("Server Running"));
+console.log(process.env.EMAIL_USER);
+console.log(process.env.EMAIL_PASS);
 
-// Email transporter
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
+    user:process.env.EMAIL_USER ,
+    pass:process.env.EMAIL_PASS
   },
 });
 
-// Verify connection
 contactEmail.verify((error) => {
   if (error) {
-    console.log("Email verification error:", error);
+    console.log(error);
   } else {
     console.log("Ready to Send");
   }
 });
 
-// Health check (required for Render)
-app.get('/health', (req, res) => res.sendStatus(200));
-
-// Contact route
-app.post("/api/contact", (req, res) => {
-  if (!req.body.name || !req.body.email || !req.body.message) {
-    return res.status(400).json({ error: "Missing required fields" });
-  }
-
-  const { name, email, message } = req.body;
-  
+router.post("/contact", (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
   const mail = {
     from: name,
-    to: process.env.EMAIL_USER,
+    to:process.env.EMAIL_USER ,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`
+           <p>Message: ${message}</p>`,
   };
-
   contactEmail.sendMail(mail, (error) => {
     if (error) {
-      console.error("Send mail error:", error);
-      res.status(500).json({ status: "Error", error: error.message });
+      res.json(error);
     } else {
-      res.status(200).json({ status: "Message Sent" });
+      res.json({ code: 200, status: "Message Sent" });
     }
   });
 });
-
-// Start server (Render will set PORT)
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
