@@ -922,6 +922,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
+.elmt{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.getouch{
+  margin-bottom: 23px;
+}
 
 /* @media (max-width: 768px) {
   .contact {
