@@ -297,10 +297,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+/************ Banner CSS ************/
+.grp-btn-banner{
+  display: flex;
+
+}
+
+/* Base Styles */
 .hi {
   display: inline-block;
   animation: 1.5s ease 0s infinite normal none running wave;
 }
+
 .hi animation {
   transform: rotate(9.44803deg);
 }
@@ -416,22 +424,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Mobile responsiveness: On small screens, make the image move to the bottom */
 @media (max-width: 768px) {
+  .grp-btn-banner{
+    display: flex;
+    justify-content: center
+  }
+  .banner button {
+    font-size: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.8px;
+  
    
+  }
   .banner .row {
     flex-direction: column-reverse;  /* Reverse the order of rows */
   }
-  .first-cl{
+  
+  .first-cl {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
   }
-  .track{
+
+  .track {
     text-align: center;
   }
- 
 
-  /* Add some margin at the top for mobile */
   .profil {
     margin-top: 20px;  /* Add space at the top to make it visible below text */
     width: 60%;  /* Optional: Reduce image size */
@@ -447,7 +464,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner h3 {
     font-size: 20px;  /* Smaller text on mobile */
     text-align: center;  /* Center text on mobile */
-   
   }
 
   .banner p {
@@ -458,15 +474,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .btn1 {
     padding: 0.5rem 1rem;  /* Adjust padding */
     width: 100%;        /* Full-width button on mobile */
-    
   }
 
   .btn1 span {
     font-size: 0.99rem;  /* Adjust button size */
-    
-    
   }
 }
+
+/* For very small screens or phones under 576px */
+@media (max-width: 576px) {
+  .grp-btn-banner{
+    display: flex;
+    justify-content: center
+  }
+  .banner button {
+    font-size: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.8px;
+  
+   
+  }
+  .banner h1 {
+    font-size: 24px;  /* Further decrease font size for small screens */
+  }
+
+  .banner h3 {
+    font-size: 18px;
+  }
+
+  .banner p {
+    font-size: 12px;  /* Smaller text for readability */
+    padding: 0 10px;  /* Add padding to the sides */
+  }
+
+  .btn1 {
+    font-size: 0.9rem;  /* Adjust button font size */
+    padding: 0.4rem 1.5rem;  /* Adjust padding */
+  }
+}
+
 
 
 

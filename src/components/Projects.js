@@ -89,8 +89,7 @@ export const Projects = () => {
                 >
                   
                   <p className="desc1">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                  Check out some of my projects
                   </p>
 
                   <div className=" d-flex flex-wrap  justify-content-around

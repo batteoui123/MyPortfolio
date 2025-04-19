@@ -69,8 +69,8 @@ export const Banner = () => {
     <>
       <section className="banner bg-succes" id="home">
         <Container className="bg-dange align-items-center">
-          <Row className="aligh-items-center">
-            <Col xs={12} md={6} xl={7} className="first-cl">
+          <Row className="aligh-items-center ">
+            <Col xs={12} md={6} xl={7} className="first-cl ">
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div
@@ -100,52 +100,6 @@ export const Banner = () => {
                         <span className="wrap">{text}</span>
                       </span>{" "}
                     </h2>
-
-                     <p>
-                    <span>{" "}</span> I'm a Software Engineering student at the National School
-                      of Applied Sciences  of Tangier (ENSAT) 🎓. I'm passionate
-                      about software development and committed to creating
-                      scalable, efficient, and user-friendly solutions.
-                    </p>
-
-                    <p>
-                      Currently in my second year, I've worked with technologies
-                      like PHP, Laravel, Java, Spring Boot, and JavaScript,
-                      gaining solid experience in both front-end and back-end
-                      development. I'm eager to continue expanding my skills and
-                      apply them to innovative projects 🚀.
-                    </p>
-
-                    <p>
-                      I've contributed to exciting academic projects, including
-                      a web platform for managing children’s activities and a
-                      freelance service marketplace, which has enhanced my
-                      coding abilities and teamwork skills.
-                    </p>
-
-                    <p>
-                      I’m always seeking new challenges 💡 and opportunities to
-                      grow professionally 🌱.
-                    </p>
-
-                    <div className="d-flex justify-content-start  ">
-                      <a href={"#contact"} style={{ textDecoration: "none" }}>
-                        <motion.button
-                          className="btn1 justify-content-center me-3"
-                          whileHover={{ scale: 1.2 }}
-                        >
-                          <span className="">contact me</span>
-                        </motion.button>
-                      </a>
-                      <a href="#" style={{ textDecoration: "none" }}>
-                        <motion.button
-                          className="btn1 justify-content-center ms-3"
-                          whileHover={{ scale: 1.2 }}
-                        >
-                          <span>download cv</span>
-                        </motion.button>
-                      </a>
-                    </div>
                   </div>
                 )}
               </TrackVisibility>
@@ -185,8 +139,7 @@ export const Banner = () => {
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
                   transition={{ duration: 0.3, delay: 0.3 }}
                 >
-                  
-                  <img src={navIcon4} style={{width:'32px'}} alt="Icon 4" />
+                  <img src={navIcon4} style={{ width: "32px" }} alt="Icon 4" />
                 </motion.a>
               </div>
             </Col>
@@ -203,6 +156,56 @@ export const Banner = () => {
                   </div>
                 )}
               </TrackVisibility>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={12} xl={12} >
+            
+            <p>
+              <span> </span> I'm a Software Engineering student at the National
+              School of Applied Sciences of Tangier (ENSAT) 🎓. I'm passionate
+              about software development and committed to creating scalable,
+              efficient, and user-friendly solutions.
+            </p>
+
+            <p>
+              Currently in my second year, I've worked with technologies like
+              PHP, Laravel, Java, Spring Boot, and JavaScript, gaining solid
+              experience in both front-end and back-end development. I'm eager
+              to continue expanding my skills and apply them to innovative
+              projects 🚀.
+            </p>
+
+            <p>
+              I've contributed to exciting academic projects, including a web
+              platform for managing children’s activities and a freelance
+              service marketplace, which has enhanced my coding abilities and
+              teamwork skills.
+            </p>
+
+            <p>
+              I’m always seeking new challenges 💡 and opportunities to grow
+              professionally 🌱.
+            </p>
+
+            <div className="grp-btn-banner">
+              <a href={"#contact"} style={{ textDecoration: "none" }}>
+                <motion.button
+                  className="btn1 justify-content-center me-3"
+                  whileHover={{ scale: 1.2 }}
+                >
+                  <span className="">contact me</span>
+                </motion.button>
+              </a>
+              <a href="#" style={{ textDecoration: "none" }}>
+                <motion.button
+                  className="btn1 justify-content-center ms-3"
+                  whileHover={{ scale: 1.2 }}
+                >
+                  <span>download cv</span>
+                </motion.button>
+              </a>
+            </div>
             </Col>
           </Row>
         </Container>
