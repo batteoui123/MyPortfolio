@@ -823,70 +823,71 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 /************ Contact Css ************/
-/************ Contact CSS ************/
+.fav1{
+  font-size: 25px;
+
+}
+.myinfos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .contact {
-  padding: 60px 0 200px 0; /* Ensure enough padding for large screens */
-  position: relative;
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  padding: 60px 0 200px 0;
 }
 
 .contact h2 {
-  font-size: 45px;
-  font-weight: 700;
+	font-size: 45px;
+	font-weight: 700;
   margin-bottom: 30px;
 }
-
-.CMcard span {
+.CMcard   span {
   width: 300px;
   background: none;
   cursor: text;
   user-select: text;
 }
 
-.contact .container {
-  padding: 37px;
+
+.contact .container{
+  padding:37px;
   border-radius: 35px;
   box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
-              4px 4px 6px rgba(94, 104, 121, 0.288);
+  4px 4px 6px rgba(94, 104, 121, 0.288);
 }
-
-.contact form input, 
-.contact form textarea {
-  width: 100%;  /* Ensure full width */
+.contact form input, .contact form textarea {
+  width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   color: #fff;
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
-
-.contact form input:focus, 
-.contact form textarea:focus {
+.contact form input:focus, .contact form textarea:focus {
   background: rgba(255, 255, 255, 1);
   color: #121212;
 }
-
-.contact form input::placeholder, 
-.contact form textarea::placeholder {
+.contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
-
-.contact form input:focus::placeholder, 
-.contact form textarea:focus::placeholder {
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
-
 .contact form button {
   font-size: 18px;
   font-weight: 800;
+ 
   padding: 14px 48px;
   border-radius: .7rem;
   color: #fdf9f9;
@@ -901,21 +902,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   z-index: 0;
   overflow: hidden;
-}
 
+}
 .contact form button span {
   z-index: 1;
   position: relative;
 }
-
 .contact form button:hover {
   background-size: 100% 100%;
   outline: none;
 }
-
 .contact form button::before {
   content: "";
-  background: linear-gradient(90deg, #a84cf5 0%, #36c0f0 100%);
+  background:linear-gradient(90deg, #a84cf5 0%, #36c0f0 100%);
   width: 0;
   height: 100%;
   position: absolute;
@@ -924,92 +923,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
-
 .contact form button:hover::before {
   width: 100%;
 }
-
-.elmt {
+.elmt{
   margin-top: auto;
   margin-bottom: auto;
 }
-
-.getouch {
-  margin-bottom: 23px;
+.getouch{
+  margin-bottom: 35px;
 }
 
-/* Media Queries for Mobile Responsiveness */
 
-/* For screens smaller than 768px (Tablets and Phones) */
 @media (max-width: 768px) {
-  .contact {
-    padding: 40px 0 100px 0;
-  }
-
-  .contact h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .contact .container {
-    padding: 20px;
-    border-radius: 25px;
-  }
-
-  .contactMe .btn {
-    width: 100% !important;
-    font-size: 0.9rem;
-    padding: 10px 12px;
-    margin-bottom: 15px;
-    text-align: left;
-  }
-
-  .contact form {
-    margin-top: 30px;
-  }
-
-  .contact form input,
-  .contact form textarea {
-    font-size: 16px;
-    padding: 14px 20px;
-  }
-
-  .contact form button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    height: auto;
-    margin-top: 20px;
-  }
-
-  .contact form .d-flex {
+  .myinfos{
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
   }
-
-  .contact form .success,
-  .contact form .danger {
-    text-align: center;
-    font-size: 0.9rem;
-  }
-}
-
-/* For extra small screens (Phones under 480px) */
-@media (max-width: 480px) {
-  .fav1 {
+  .fav1{
     font-size: 20px;
+  
   }
-
-  .CMcard span {
+  .CMcard   span {
     width: 230px;
     background: none;
     cursor: text;
     user-select: text;
   }
-
-  .contact .getouch {
+  .contact .getouch{
     font-size: medium;
   }
+  
+
+
 
   .contact h2 {
     font-size: 1.6rem;
@@ -1029,7 +976,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 14px;
   }
 }
-
 
 /************ Footer Css ************/
 

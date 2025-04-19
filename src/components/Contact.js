@@ -84,7 +84,7 @@ export const Contact = () => {
       <h2 className="text-center mb-5">Contact</h2>
       <Container  className="bg-primar">
         <Row className="align-items-center">
-          <Col md={12} sm={12} lg={5} className=" mb-4 myinfos">
+          <Col md={12} sm={12} lg={5} className=" myinfos">
             <motion.div       
               initial={{ x: "-30vw" }}
               whileInView={{ x: "0vw" }}
@@ -125,7 +125,7 @@ export const Contact = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <h3 className="getouch">Get In Touch</h3>
-                  <form onSubmit={handleSubmit} className="bg-dange ms-4">
+                  <form onSubmit={handleSubmit} className="bg-dange">
                     <Row>
                       <Col size={12} sm={12} className=" elmt">
                         <input
@@ -150,7 +150,7 @@ export const Contact = () => {
                           placeholder="Message"
                           onChange={(e) => onFormUpdate("message", e.target.value)}
                         ></textarea>
-                        <div className="d-flex bg-dange gap-5 align-items-center mybtn ">
+                        <div className="d-flex bg-dange align-items-center mybtn ">
                            <button type="submit text-center send " className="">
                                <span>{buttonText}</span>
                            </button>
