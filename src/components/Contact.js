@@ -182,7 +182,7 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <motion.div className={isVisible ? "animate__animated animate__fadeIn" : ""} 
-                  initial={{ x: "30vw" }}
+                  initial={{ x: "-30vw" }}
                 whileInView={{ x: "0vw" }}
                 transition={{ duration: 0.6 }}
                 
