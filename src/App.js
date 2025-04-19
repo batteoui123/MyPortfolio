@@ -16,10 +16,10 @@ function App() {
        <Banner  />
       {/* <Skills />
       <Education/>
-      <Projects />
-      <Contact />  */}
+      <Projects />*/}
+       <Contact />  
     
-      {/* <Footer /> */}
+       <Footer />
     </div>
   );
 }
