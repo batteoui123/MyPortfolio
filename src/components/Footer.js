@@ -8,7 +8,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 export const Footer = () => {
   return (
     <footer className="footer  " >
-      <Container fluid className="d-flex  flex-column align-items-center ">
+      <Container  className="d-flex  flex-column align-items-center ">
         {/* <Row className="align-items-center"> */}
           
           

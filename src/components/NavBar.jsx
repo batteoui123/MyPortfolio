@@ -51,11 +51,11 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <nav className={`navbar  navbar-expand-md  ${scrolled ? "scrolled" : ""}`}>
+      <nav className={`navbar  navbar-expand-lg  ${scrolled ? "scrolled" : ""}`}>
         
       
 
-        <div className="container-fluid bg-danger">
+        <div className="container bg-dange">
           <a className="navbar-brand"  href="/">
             {/* <img src={logo} alt="Logo" className="bg-danger"style={{width:'100px' ,background:'none'}} /> */}
             <span className="logo">

@@ -67,8 +67,8 @@ export const Banner = () => {
 
   return (
     <>
-      <section className="banner bg-succes" id="home">
-        <div className="container-fluid bg-dange align-items-center">
+      <section className="banner " id="home">
+        <div className="container bg-dange align-items-center">
           <Row className="aligh-items-center ">
             <Col xs={12} md={6} xl={7} className="first-cl ">
               <TrackVisibility>

@@ -116,7 +116,8 @@ p.danger {
  
 }
 nav.navbar {
-
+  padding: 18px 0;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
@@ -146,9 +147,9 @@ nav.navbar .navbar-nav a.nav-link.navbar-link{
   font-size: 20px;
   font-weight: 400;
   font-style: normal;
-  height: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
+  /* height: 30px; */
+  margin-right: auto;
+  margin-left: auto;
   
 }
 

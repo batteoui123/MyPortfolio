@@ -12,14 +12,13 @@ import Education from './components/Education';
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <div className="container-fluid">
+      <NavBar />   
       <Banner  />
       <Skills />
       <Education/>
       <Projects />
       <Contact />
-      </div>
+    
       <Footer />
     </div>
   );
