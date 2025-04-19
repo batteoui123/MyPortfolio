@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
 
+
 import { FaHandsClapping } from "react-icons/fa6";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
