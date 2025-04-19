@@ -115,7 +115,7 @@ export const Contact = () => {
             </motion.div>
           </Col>
 
-          <Col md={12} sm={12} lg={7}>
+          {/* <Col md={12} sm={12} lg={7}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <motion.div
@@ -175,7 +175,7 @@ export const Contact = () => {
                 </motion.div>
               )}
             </TrackVisibility>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>
