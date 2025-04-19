@@ -82,7 +82,7 @@ const resetValue = (targetName) => {
 
   return (
     <section id="skills" className="skill bg-dange ">
-      <div className="container ">
+      <div className="container-fluid ">
         <h2 className="pt-5 mb-5">Skills</h2>
         <div className="skill-container">
           {/* ProgrammingLang */}

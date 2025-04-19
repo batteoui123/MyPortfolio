@@ -55,7 +55,7 @@ export const NavBar = () => {
         
       
 
-        <div className="container">
+        <div className="container-fluid">
           <a className="navbar-brand"  href="/">
             {/* <img src={logo} alt="Logo" className="bg-danger"style={{width:'100px' ,background:'none'}} /> */}
             <span className="logo">

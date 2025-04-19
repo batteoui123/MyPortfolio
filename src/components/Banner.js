@@ -68,7 +68,7 @@ export const Banner = () => {
   return (
     <>
       <section className="banner bg-succes" id="home">
-        <Container className="bg-dange align-items-center">
+        <div className="container-fluid bg-dange align-items-center">
           <Row className="aligh-items-center ">
             <Col xs={12} md={6} xl={7} className="first-cl ">
               <TrackVisibility>
@@ -208,7 +208,7 @@ export const Banner = () => {
             </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </section>
     </>
   );

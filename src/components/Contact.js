@@ -82,7 +82,7 @@ export const Contact = () => {
   return (
     <section className="contact bg-succes" id="contact">
       <h2 className="text-center mb-5">Contact</h2>
-      <Container className="bg-primar">
+      <Container fluid className="bg-primar">
         <Row className="align-items-center">
           <Col md={12} sm={12} lg={5} className=" mb-4">
             <motion.div       
