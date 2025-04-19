@@ -84,7 +84,7 @@ export const Contact = () => {
       <h2 className="text-center mb-5">Contact</h2>
       <Container  className="bg-primar">
         <Row className="align-items-center">
-          <Col md={12} sm={12} lg={5} className=" mb-4">
+          <Col md={12} sm={12} lg={5} className=" mb-4 myinfos">
             <motion.div       
               initial={{ x: "-30vw" }}
               whileInView={{ x: "0vw" }}
@@ -115,7 +115,7 @@ export const Contact = () => {
             </motion.div>
           </Col>
 
-          {/* <Col md={12} sm={12} lg={7}>
+          <Col md={12} sm={12} lg={7}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <motion.div
@@ -175,7 +175,7 @@ export const Contact = () => {
                 </motion.div>
               )}
             </TrackVisibility>
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </section>
