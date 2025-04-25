@@ -63,6 +63,7 @@ export const Contact = () => {
     setButtonText("Send");
 
     let result = await response.json();
+    console.log(result)
     setFormDetails(formInitialDetails);
 
     if (result.code == 200) {
@@ -82,15 +83,16 @@ export const Contact = () => {
   return (
     <section className="contact bg-succes" id="contact">
       <h2 className="text-center mb-5">Contact</h2>
-      <Container  className="bg-primar">
-        <Row className="align-items-center">
-          <Col md={12} sm={12} lg={5} className=" myinfos">
+      <Container  >
+        <Row className="main-row bg-dange align-items-center  " >
+          <Col md={12} sm={12} lg={5} className="d-flex flex-column align-items-center justify-content-center" >
             <motion.div       
               initial={{ x: "-30vw" }}
               whileInView={{ x: "0vw" }}
               transition={{ duration: 0.6 }}
+              
             >
-              <div className="contactMe">
+              <div className="contactMe bg-succes d-flex flex-column align-items-center justify-content-center">
                 <div className="CMcard">
                   <div className="mb-3 ">
                     <FaEnvelope color="#0b76a8" className="fav1" />{" "}
@@ -178,7 +180,7 @@ export const Contact = () => {
           </Col> */}
 
 
-<Col size={12} md={6}>
+<Col size={12}  >
             <TrackVisibility>
               {({ isVisible }) =>
                 <motion.div className={isVisible ? "animate__animated animate__fadeIn" : ""} 
@@ -189,7 +191,7 @@ export const Contact = () => {
                 
                 >
                 <h2 className="getouch">Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                   <Row>
                  
                 
@@ -232,6 +234,8 @@ export const Contact = () => {
               </motion.div>}
             </TrackVisibility>
           </Col>
+
+
         </Row>
       </Container>
     </section>
