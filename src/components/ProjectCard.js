@@ -21,27 +21,21 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
       className="card card-project box  m-3"
       initial={{ x: "-30vw" }}
       whileInView={{ x: "0vw" }}
-      transition={{ duration: 0.6 }}
-      style={{ width: "360px" }}
-      whileHover={{ scale: 1.14 }}
+      transition={{ duration: 0.4 }}
+      style={{ width: "320px" }}
+      whileHover={{ scale: 1.1 }}
     >
       <div className="proj-imgbx">
         <img
           className="card-img-top "
           src={imgUrl}
           alt="Card image"
-          style={{ height: "250px" }}
+          style={{ height: "200px" }}
         />
         <div className="proj-txtx">
-          <div className="text-start mt-3 images-project  ">
-            {technologies.map((tech) => (
-              <img
-                className="m-2"
-                src={tech}
-                style={{ height: "40px", width: "40px" }}
-              />
-            ))}
-          </div>
+          <motion.a>
+            <FaGithub size={50} color="bleu" />
+          </motion.a>
         </div>
       </div>
 
@@ -53,12 +47,16 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
           {description}
         </div>
       </div>
-      <motion.a style={{ fontSize: "12px",opacity:'0.4' }} className="text-end m-2"
-       whileHover={{ opacity:1}}
-      
-      >
-        <FaGithub size={30}  />
-      </motion.a>
+
+      <div className=" images-project  ">
+        {technologies.map((tech) => (
+          <img
+            className="m-3 "
+            src={tech}
+            style={{ height: "20px", width: "20px" }}
+          />
+        ))}
+      </div>
     </motion.div>
   );
 };

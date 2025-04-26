@@ -722,8 +722,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: start;
  background-color: #0f1624 !important;
  /* background-color: #617565 !important; */
- border-top-right-radius: 30px  !important;
- border-top-left-radius: 30px  !important;
+ border-top-right-radius: 10px  !important;
+ border-top-left-radius: 10px  !important;
 
  width: 300px; 
   transition: width 0.3s ease; 
@@ -775,13 +775,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
   /* margin-bottom: 24px; */
 }
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90deg, #13081d, #045270d5);
+  
   
   opacity:0.9;
   position: absolute;
@@ -807,9 +808,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .proj-imgbx:hover .proj-txtx {
   /* top: 50%; */
+  opacity: 1 !important;
  
-  opacity: 8;
- 
+}
+.proj-txtx img{
+
 }
 
 
@@ -1136,17 +1139,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } */
 
 .education h2 {
-	font-size: 45px;
-	font-weight: 700;
+
   text-align: center; 
-  padding-top: 38px;
+  font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
 
 }
 
-.education h2{
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
+
   
   .timeline {
     padding-left: 15px;
@@ -1213,6 +1214,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 /* Pour écrans moyens (tablettes) */
 @media (max-width: 976px) {
+
   .edu-desc {
     font-size: 0.9rem;
   }
@@ -1230,6 +1232,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Pour petits écrans (smartphones) */
 @media (max-width: 676px) {
+  .education h2 {
+    font-size: 1.6rem;
+  }
   .edu-desc {
     font-size: 0.7rem;
   }
