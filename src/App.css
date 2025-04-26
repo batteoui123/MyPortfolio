@@ -281,7 +281,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: end;
   justify-content: end;
   background-color: red;
-  width: 25%;
+  
   
 }
 
@@ -782,6 +782,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90deg, #13081d, #045270d5);
+  
   opacity:0.9;
   position: absolute;
   width: 100%;
@@ -811,29 +812,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  
 }
 
-
-
-
-/* Tablets and medium screens */
-/* @media (max-width: 768px) {
-  .project .main-title {
-    font-size: 2rem;
-  }
-
-  .project .desc1 {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-  }
-
-  .project .cardList {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project .card-project {
-    width: 90%;
-  }
-} */
 
 /* Phones and small screens */
 @media (max-width: 576px) {
@@ -1138,36 +1116,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* education css */
 
-.accordion-header {
-  font-size: 1.1rem;
-  border-radius:5px ;
-  cursor: pointer;
-  padding: 15px;
-  background-color: #0f1624 !important;
-  color: white !important;
-  
-}
-
-
-
-
-
-/* Style for Accordion Body */
-.accordion-body {
-  background-color: #0f1624 !important;
-  padding: 15px;
-  border-radius: 5px;
-  border-top: 0px solid #ddd; 
- 
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Optional: Style the chevron icon */
-.custom-chevron {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
 
 .education-timeline {
   padding-right:50px;
@@ -1181,11 +1129,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-family: Arial, sans-serif;
 }
-.education-timeline h4 {
+/* .education-timeline h4 {
   color: #0f0b50;
   font-weight: 700;
   font-size: 20px; 
-}
+} */
 
 .education h2 {
 	font-size: 45px;
@@ -1194,85 +1142,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding-top: 38px;
 
 }
-.education .title{
-  margin-bottom: 30px;
-}
 
-.timeline {
-  margin-left: 28px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-left: 40px;
-}
-
-.timeline-item {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #a84cf5 0%, #36c0f0 100%);
-  position: absolute;
-  left: -30px; 
-}
-
-.timeline-content {
-  /* background-color: #222; */
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-.timeline-content h3 {
-  background: linear-gradient(90deg, #a84cf5, #36c0f0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
-.timeline-content p {
-  font-size: 1rem;
-  color: #B8B8B8;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
-}
-
-/* Styling for the line connecting the dots */
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #36c0f0;
-}
-
-.logoschol img{
-  width: 100px;
-}
-
-
-
-@media (max-width: 576px) {
-     .education h2{
+.education h2{
       font-size: 1.8rem;
       margin-bottom: 20px;
     }
   
-  .timeline-mobile {
+  .timeline {
     padding-left: 15px;
     border-left: 2px solid #36c0f0;
   }
 
-  .timeline-item-mobile {
+  .timeline-item {
     position: relative;
     margin-bottom: 25px;
     padding-left: 15px;
@@ -1288,37 +1169,78 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     top: 8px;
   }
 
-  .timeline-content-mobile {
+  .timeline-content{
     padding-left: 10px;
   }
 
-  .timeline-header-mobile {
+  .timeline-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
    
   }
 
-  .school-logo-mobile {
-    width: 40px;
-    height: 40px;
+  .school-logo {
+    width: 70px;
+    height: 70px;
     position: relative;
     right: 10px;
   }
 
   .edu-title {
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
     font-weight: 600;
     color: white;
     margin-top: 5px;
   }
+  .edu-desc{
+    width: 80%;
+    position: relative;
+    left: 10px;
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    line-height: 1.5em;
+    
+  }
 
   .year {
-    font-size: 1rem;
+
     font-weight: bold;
     background: linear-gradient(90deg, #a84cf5, #36c0f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+/* Pour écrans moyens (tablettes) */
+@media (max-width: 976px) {
+  .edu-desc {
+    font-size: 0.9rem;
+  }
+  .edu-title {
+    font-size: 1.2rem;
+  }
+  .year {
+    font-size: 1.4rem;
+  }
+  .school-logo {
+    width: 60px;
+    height: 60px;
+  }
 }
 
+/* Pour petits écrans (smartphones) */
+@media (max-width: 676px) {
+  .edu-desc {
+    font-size: 0.7rem;
+  }
+  .edu-title {
+    font-size: 0.9rem;
+  }
+  .year {
+    font-size: 1.2rem;
+  }
+  .school-logo {
+    width: 50px;
+    height: 50px;
+  }
+}

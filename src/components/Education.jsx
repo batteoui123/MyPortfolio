@@ -6,7 +6,7 @@ import lycee from "../assets/img/lycee.jpg";
 import { Accordion } from "react-bootstrap";
 
 const Education = () => {
-  const isMobile = window.innerWidth <= 576;
+  const isMobile = window.innerWidth <= 876;
 
     const educationData = [
         { 
@@ -27,86 +27,49 @@ const Education = () => {
           year: "2020 - 2021",
           title: "First Year of DEUST",
           description:
-            "Completed my first year of DEUST (Diploma in University Studies in Technology) specializing in MIP (Mathematics, Computer Science, Physics) at the Faculty of Sciences and Technologies of Fes (FSTF).",
+            "Completed my first year of DEUST specializing in MIP (Mathematics, Computer Science, Physics) at the Faculty of Sciences and Technologies of Fes (FSTF).",
           img:fst
         },
         {
           year: "2019 - 2020",
           title: "Scientific Baccalaureate",
           description:
-            "Graduated with a Scientific Baccalaureate, Physics-Chemistry option, ith highest honour from Lycée AL WAHDA in Taounate.",
+            "Graduated with a Scientific Baccalaureate, Physics-Chemistry option ,from Lycée AL WAHDA in Taounate.",
           img:lycee
         },
       ];
 
   return (
-      <section className="education" id="education" >
-         <h2 className="title">Education</h2>
-         
-         <div className="container education-timeline">
-  {!isMobile ? (
-    <div className="timeline">
-      {educationData.map((item, key) => (
-        <motion.div
-          className="timeline-item"
-          key={key}
-          initial={{ x: "-30vw" }}
-          whileInView={{ x: "0vw" }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="timeline-dot" />
-          <div className="timeline-content row d-flex align-items-center">
-            <motion.div className="col-9" whileHover={{ scale: 1.07 }}>
-              <h3>{item.year}</h3>
-              <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey={key}>
-                  <Accordion.Header className="accordion-header">
-                    <h4>{item.title}</h4>
-                  </Accordion.Header>
-                  <Accordion.Body className="accordion-body">
-                    <p>{item.description}</p>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+    <section className="education" id="education" >
+      <h2 className="title">Education</h2>
+
+      <div className="container education-timeline">
+        <div className="timeline container-fluid">
+          {educationData.map((item, key) => (
+            <motion.div
+              className="timeline-item"
+              key={key}
+              initial={{ x: "-30vw" }}
+              whileInView={{ x: "0vw" }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <div className="timeline-header d-flex justify-content-between align-items-center">
+                  <h3 className="year">{item.year}</h3>
+                  <img src={item.img} className="school-logo rounded-pill" />
+                </div>
+                <h5 className="edu-title">{item.title}</h5>
+                <p className="edu-desc">{item.description}</p>
+              </div>
             </motion.div>
-            <div className="col-3 logoschol text-center">
-              <img src={item.img} className="rounded-pill" />
-            </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  ) : (
-    <div className="timeline-mobile container-fluid">
-      {educationData.map((item, key) => (
-        <motion.div
-          className="timeline-item-mobile"
-          key={key}
-          initial={{ x: "-30vw" }}
-          whileInView={{ x: "0vw" }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="timeline-dot" />
-          <div className="timeline-content-mobile">
-            <div className="timeline-header-mobile d-flex justify-content-between align-items-center">
-              <h4 className="year">{item.year}</h4>
-              <img src={item.img} className="school-logo-mobile rounded-pill" />
-            </div>
-            <p className="edu-title">{item.title}</p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  )}
-</div>
+          ))}
+        </div>
 
-
-
-
+      </div>
 
      
-            
-      </section>
+    </section>
   );
 };
 
