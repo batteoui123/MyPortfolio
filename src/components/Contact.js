@@ -60,18 +60,25 @@ export const Contact = () => {
       },
       body: JSON.stringify(formDetails),
     });
+    
     setButtonText("Send");
-
+    
+    // Vérifier si la réponse de la requête est ok (status 200)
+    if (!response.ok) {
+      throw new Error("Failed to send message");
+    }
+    
     let result = await response.json();
-    console.log(result)
+    console.log(result);
+    
     setFormDetails(formInitialDetails);
-
-    if (result.code == 200) {
+    
+    if (result.status === 'Message Sent') {  // Vérification sur 'status' et non 'code'
       setStatus({ success: true, message: 'Message sent successfully' });
     } else {
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
     }
-  
+    
 
     
     setTimeout(() => {
