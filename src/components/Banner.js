@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 
 
+
+
 import { FaHandsClapping } from "react-icons/fa6";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -70,6 +72,7 @@ export const Banner = () => {
     <>
       <section className="banner " id="home">
         <div className="container bg-dange align-items-center">
+    
           <Row className="aligh-items-center ">
             <Col xs={12} md={6} xl={7} className="first-cl ">
               <TrackVisibility>
@@ -160,53 +163,52 @@ export const Banner = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={12} xl={12} >
-            
-            <p>
-              <span> </span> I'm a Software Engineering student at the National
-              School of Applied Sciences of Tangier (ENSAT) 🎓. I'm passionate
-              about software development and committed to creating scalable,
-              efficient, and user-friendly solutions.
-            </p>
+            <Col xs={12} md={12} xl={12}>
+              <p>
+                <span> </span> I'm a Software Engineering student at the
+                National School of Applied Sciences of Tangier (ENSAT) 🎓. I'm
+                passionate about software development and committed to creating
+                scalable, efficient, and user-friendly solutions.
+              </p>
 
-            <p>
-              Currently in my second year, I've worked with technologies like
-              PHP, Laravel, Java, Spring Boot, and JavaScript, gaining solid
-              experience in both front-end and back-end development. I'm eager
-              to continue expanding my skills and apply them to innovative
-              projects 🚀.
-            </p>
+              <p>
+                Currently in my second year, I've worked with technologies like
+                PHP, Laravel, Java, Spring Boot, and JavaScript, gaining solid
+                experience in both front-end and back-end development. I'm eager
+                to continue expanding my skills and apply them to innovative
+                projects 🚀.
+              </p>
 
-            <p>
-              I've contributed to exciting academic projects, including a web
-              platform for managing children’s activities and a freelance
-              service marketplace, which has enhanced my coding abilities and
-              teamwork skills.
-            </p>
+              <p>
+                I've contributed to exciting academic projects, including a web
+                platform for managing children’s activities and a freelance
+                service marketplace, which has enhanced my coding abilities and
+                teamwork skills.
+              </p>
 
-            <p>
-              I’m always seeking new challenges 💡 and opportunities to grow
-              professionally 🌱.
-            </p>
+              <p>
+                I’m always seeking new challenges 💡 and opportunities to grow
+                professionally 🌱.
+              </p>
 
-            <div className="grp-btn-banner">
-              <a href={"#contact"} style={{ textDecoration: "none" }}>
-                <motion.button
-                  className="btn1 justify-content-center me-3"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  <span className="">contact me</span>
-                </motion.button>
-              </a>
-              <a href="#" style={{ textDecoration: "none" }}>
-                <motion.button
-                  className="btn1 justify-content-center ms-3"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  <span>download cv</span>
-                </motion.button>
-              </a>
-            </div>
+              <div className="grp-btn-banner">
+                <a href={"#contact"} style={{ textDecoration: "none" }}>
+                  <motion.button
+                    className="btn1 justify-content-center me-3"
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <span className="">contact me</span>
+                  </motion.button>
+                </a>
+                <a href="#" style={{ textDecoration: "none" }}>
+                  <motion.button
+                    className="btn1 justify-content-center ms-3"
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <span>download cv</span>
+                  </motion.button>
+                </a>
+              </div>
             </Col>
           </Row>
         </div>

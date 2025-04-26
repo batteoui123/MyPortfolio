@@ -56,6 +56,7 @@ export const NavBar = () => {
       
 
         <div className="container bg-dange">
+       
           <a className="navbar-brand"  href="/">
             {/* <img src={logo} alt="Logo" className="bg-danger"style={{width:'100px' ,background:'none'}} /> */}
             <span className="logo">
@@ -71,17 +72,25 @@ export const NavBar = () => {
           
             
           </a>
+        
 
-          <button
-            className="navbar-toggler"
+          
+            <div>
+            
+            <button
+            className="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
           >
             <span className="navbar-toggler-icon"></span>
+            
           </button>
-
-          <div className="collapse navbar-collapse justify-content-end"  id="navbarNav">
+          
+            </div>
+           
+         
+          <div className="collapse navbar-collapse "  id="navbarNav">
             <ul className="navbar-nav " style={{background:'bod'}}>
 
               <motion.li className="nav-item">   
@@ -206,9 +215,18 @@ export const NavBar = () => {
                   Contact
                 </motion.a>
               </li>
+             
+             
             </ul>
+        
           </div>
+        
+            
+          
+           
+           
         </div>
+        
       </nav>
     </Router>
   );
