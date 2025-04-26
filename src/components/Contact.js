@@ -53,7 +53,7 @@ export const Contact = () => {
 
     setButtonText("Sending...");
     
-    let response = await fetch("https://portfo-jet-two.vercel.app/api/contact", {
+    let response = await fetch("https://portfolio-api-batteoui.vercel.app/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
