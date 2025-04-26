@@ -50,7 +50,7 @@ export const Projects = () => {
       title: "Freelance Service Marketplace",
       description: "Backend developer in a freelance service platform enabling smart matching, messaging, and real-time notifications.",
       imgUrl: projImg1,
-      technologies:[spring,tailwind,next,postgre,groq,]
+      technologies:[spring,tailwind,next,postgre]
     },
     {
       
@@ -89,7 +89,7 @@ export const Projects = () => {
                 >
                   
                   <p className="desc1">
-                  Check out some of my projects
+                  Here's some of my projects
                   </p>
 
                   <div className=" d-flex flex-wrap  justify-content-around

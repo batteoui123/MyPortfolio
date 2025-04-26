@@ -124,69 +124,6 @@ export const Contact = () => {
             </motion.div>
           </Col>
 
-          {/* <Col md={12} sm={12} lg={7}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <motion.div
-                  className={isVisible ? "animate__animated animate__fadeIn" : ""}
-                  initial={{ x: "30vw" }}
-                  whileInView={{ x: "0vw" }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h3 className="getouch">Get In Touch</h3>
-                  <form onSubmit={handleSubmit} className="bg-dange">
-                    <Row>
-                      <Col size={12} sm={12} className=" elmt">
-                        <input
-                          type="text"
-                          value={formDetails.name}
-                          placeholder="Name"
-                          onChange={(e) => onFormUpdate("name", e.target.value)}
-                        />
-                      </Col>
-                      <Col size={12} sm={12} className=" elmt ">
-                        <input
-                          type="email"
-                          value={formDetails.email}
-                          placeholder="Email Address"
-                          onChange={(e) => onFormUpdate("email", e.target.value)}
-                        />
-                      </Col>
-                      <Col size={12} className=" bg-dange elmt">
-                        <textarea
-                          rows="6"
-                          value={formDetails.message}
-                          placeholder="Message"
-                          onChange={(e) => onFormUpdate("message", e.target.value)}
-                        ></textarea>
-                        <div className="d-flex bg-dange align-items-center mybtn ">
-                           <button type="submit text-center send " className="">
-                               <span>{buttonText}</span>
-                           </button>
-                       
-                             {status.message && (
-                    
-                                   <div className=" " style={{marginLeft:'auto'}}>
-                                 <p className={status.success === false ? "danger" : "success"}>
-                                    {status.message} 
-                                </p>
-                                </div>
-                      
-
-                            )} 
-                          
-                        </div>
-                        
-                      </Col>
-                      
-                    </Row>
-                  </form>
-                </motion.div>
-              )}
-            </TrackVisibility>
-          </Col> */}
-
-
 <Col size={12}  >
             <TrackVisibility>
               {({ isVisible }) =>

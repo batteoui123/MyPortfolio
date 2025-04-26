@@ -19,6 +19,9 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
   return (
     <motion.div
       className="card card-project box  m-3"
+      initial={{ x: "-30vw" }}
+      whileInView={{ x: "0vw" }}
+      transition={{ duration: 0.6 }}
       style={{ width: "360px" }}
       whileHover={{ scale: 1.14 }}
     >
