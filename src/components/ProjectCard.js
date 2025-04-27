@@ -34,7 +34,7 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
         />
         <div className="proj-txtx">
           <motion.a>
-            <FaGithub size={50} color="bleu" />
+            <FaGithub size={50} color="black" />
           </motion.a>
         </div>
       </div>

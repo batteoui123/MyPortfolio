@@ -90,7 +90,7 @@ export const NavBar = () => {
             </div>
            
          
-          <div className="collapse navbar-collapse justify-content-end "  id="navbarNav">
+          <div className="collapse navbar-collapse justify-content-end"  id="navbarNav">
             <ul className="navbar-nav  " style={{background:'bod'}}>
 
               <motion.li className="nav-item">   

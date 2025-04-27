@@ -14,6 +14,12 @@
 	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
 }
+@font-face {
+  font-family: 'Lomenthosy Slant';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lomenthosy Slant'), url('./assets/font/LomenthosySlant-axKjK.woff') format('woff');
+}
 
 /************ Default Css ************/
 * {
@@ -267,20 +273,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 30px;
 }
 .navbar-nav{
- 
+  width: 55%;
+  height: 100%;
+  padding: 27px;
+  border-radius: 10px;
+  box-shadow: -2px -2px 4px rgba(94, 104, 121, 0.288),
+              4px 4px 6px rgba(94, 104, 121, 0.288);
+ text-align: start;
   align-self: end;
+ 
+ 
 }
 .navbar-collapse {
-  padding: 27px;
-  border-radius: 35px;
-  box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
-              4px 4px 6px rgba(94, 104, 121, 0.288);
+
 
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: end; 
   justify-content: end;
-  background-color: red;
+
+ 
+
   
   
 }
@@ -887,7 +900,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 12px;
   color: #fff;
   margin: 0 0 8px 0;
   padding: 18px 26px;
@@ -963,13 +976,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: medium;
 }
 
-@media (max-width: 884px) {
+@media (max-width: 684px) {
   /* .main-row{
     display: flex;
     flex-direction: column;
     align-items: center;
     
   } */
+  .CMcard .mb-3 {
+    
+  display: flex;
+  }
+  .contact form input, .contact form textarea {
+    border-radius: 12px;
+    margin: 0 0 8px 0;
+    padding: 13px 26px;
+    font-size: 10px;
+   
+ 
+  }
+  .contact form button {
+    font-size: 14px;
+    padding: 14px 48px;
+    border-radius: .7rem;
+    color: #fdf9f9;
+    height: 50%;
+    margin-top: 15px;
+  
+  
+  }
   .fav1{
     font-size: 20px;
   
@@ -1219,10 +1254,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 0.9rem;
   }
   .edu-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .year {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
   .school-logo {
     width: 60px;
@@ -1236,10 +1271,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-size: 1.6rem;
   }
   .edu-desc {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .edu-title {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .year {
     font-size: 1.2rem;

@@ -110,6 +110,7 @@ export const Banner = () => {
               <div className="social-icon  bg-succes  d-flex justify-content-start my-5">
                 <motion.a
                   href="https://www.linkedin.com/in/elbatteoui-oussama-54b59427a/"
+                  target="_blank" 
                   className="me-3 "
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -120,6 +121,7 @@ export const Banner = () => {
 
                 <motion.a
                   href="https://www.facebook.com/oussama.batiwi.7"
+                  target="_blank" 
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -129,6 +131,7 @@ export const Banner = () => {
                 </motion.a>
                 <motion.a
                   href="https://www.instagram.com/oussamaelbatteoui/"
+                  target="_blank" 
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -138,6 +141,7 @@ export const Banner = () => {
                 </motion.a>
                 <motion.a
                   href="https://github.com/batteoui123"
+                  target="_blank" 
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}

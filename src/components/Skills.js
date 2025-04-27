@@ -24,6 +24,7 @@ import mysql from "../assets/img/DB/mysql-logo-svgrepo-com.svg";
 import postgre from "../assets/img/DB/postgresql-svgrepo-com.svg";
 import oracle from "../assets/img/DB/oracle.png";
 import plsql from "../assets/img/DB/plsql.png";
+import mongo from "../assets/img/DB/mongodb-svgrepo-com.svg";
 
 import french from "../assets/img/Langages/flag-fr-svgrepo-com.svg";
 import arabic from "../assets/img/Langages/flag-for-flag-morocco-svgrepo-com.svg";
@@ -44,6 +45,7 @@ import office from "../assets/img/Tools/microsoft-office-2013-logo-svgrepo-com.s
 import matlab from "../assets/img/Tools/matlab-svgrepo-com.svg";
 import spss from "../assets/img/Tools/339-3393438_spss-spss-logo-hd-png-download.png";
 import { style } from "framer-motion/client";
+
 // import spss from "../assets/img/Tools/339-3393438_spss-spss-logo-hd-png-download.png";
 import msproject from "../assets/img/Tools/msproject.png";
 
@@ -189,12 +191,12 @@ const resetValue = (targetName) => {
                 <p>Oracle</p>
               </motion.div>
               <div className="skill-item ">
-                <img src={plsql}  />
-                <p>PL/SQL</p>
+                <img src={mongo} />
+                <p>MongoDb</p>
               </div>
               <div className="skill-item ">
-                <img src={nosql} />
-                <p>Nosql</p>
+                <img src={plsql}  />
+                <p>PL/SQL</p>
               </div>
             </div>
           </motion.div>
