@@ -123,6 +123,12 @@ p.danger {
 }
 
 nav.navbar {
+  background-image: linear-gradient(
+    to bottom,
+    #0f1624  100%, /* Couleur bleue sur les 20 premiers pixels */
+     transparent 0px /* Puis rouge jusqu'à la fin */
+  );
+ 
   padding: 18px 0;
   position: fixed;
   width: 100%;
@@ -130,9 +136,16 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+nav .navbar-nav {
+  background-color: #0f1624 ;
+
+}
+
 nav.navbar.scrolled {
   padding: 2px 0;
-  background-color: #0f1624 
+  /* background-color: #0f1624 ; */
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(5px); /* Pour Safari */
 }
 
 nav.navbar a.navbar-brand {
@@ -264,6 +277,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 991px) {
+
+  
+  nav.navbar .navbar-nav a.nav-link.navbar-link{
+    font-size: 18px;
+  }
+  nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    font-size: 16px; 
+}
   nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     text-decoration: none;
     
@@ -272,7 +293,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .logo{                                              
   font-size: 30px;
 }
+
 .navbar-nav{
+ 
   width: 55%;
   height: 100%;
   padding: 27px;
@@ -285,18 +308,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  
 }
 .navbar-collapse {
-
-
+ 
   display: flex;
   flex-direction: column;
   align-items: end; 
   justify-content: end;
-
- 
-
-  
-  
 }
+.nav-item {
+ padding-bottom:14px ;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
+  text-decoration: none; 
+}
+
 
 }
 

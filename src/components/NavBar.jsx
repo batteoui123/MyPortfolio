@@ -12,8 +12,16 @@ import { Border, BorderBottom } from "react-bootstrap-icons";
 import { tr } from "framer-motion/m";
 
 export const NavBar = () => {
-
   const [triggerAnimation, setTriggerAnimation] = useState(true);
+  const [activeLink, setActiveLink] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false); // Nouvel état pour contrôler le menu
+
+  const navBarStyle={
+  
+    backgroundImage: `linear-gradient(to bottom, #0f1624 24%, transparent 20px)`,
+    
+  }
 
   useEffect(() => {
     // Set interval to trigger animation every 3 minutes (180 seconds)
@@ -24,12 +32,6 @@ export const NavBar = () => {
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, []);
 
-  
-
-
-
-  const [activeLink, setActiveLink] = useState('');
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -47,11 +49,12 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    setExpanded(false); // Ferme le menu après avoir cliqué sur un lien
   }
 
   return (
     <Router>
-      <nav className={`navbar  navbar-expand-lg  ${scrolled ? "scrolled" : ""}`}>
+      <nav className={`navbar  navbar-expand-lg   ${scrolled ? "scrolled" : ""}`} style={expanded? navBarStyle:{}}>
         
       
 
@@ -75,23 +78,27 @@ export const NavBar = () => {
         
 
           
-            <div>
+            <div className="">
             
             <button
-            className="navbar-toggler "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-            
-          </button>
+              className="navbar-toggler "
+              type="button"
+              onClick={() => setExpanded(!expanded)} // Toggle le menu
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded={expanded ? "true" : "false"}
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+
+            </button>
           
             </div>
            
          
-          <div className="collapse navbar-collapse justify-content-end"  id="navbarNav">
-            <ul className="navbar-nav  " style={{background:'bod'}}>
+          <div  className={`collapse navbar-collapse justify-content-end ${expanded ? "show" : ""}`}  id="navbarNav">
+            <ul className="navbar-nav   " style={{background:'bod'}}>
 
               <motion.li className="nav-item">   
                 <motion.a
