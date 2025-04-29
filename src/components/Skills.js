@@ -16,6 +16,7 @@ import c from "../assets/img/ProgrammingLang/c.svg";
 import cSharp from "../assets/img/ProgrammingLang/csharp.svg";
 import bootstrap from "../assets/img/Frameworks/bootstrap.svg";
 import react from "../assets/img/Frameworks/react.svg";
+import next from "../assets/img/Frameworks/next.svg";
 import spring from "../assets/img/Frameworks/spring.svg";
 import javaFx from "../assets/img/Frameworks/JavaFX_Logo.png";
 import laravel from "../assets/img/Frameworks/laravel.svg";
@@ -151,6 +152,10 @@ const resetValue = (targetName) => {
               <div className="skill-item ">
                 <img src={react} />
                 <p>React js</p>
+              </div>
+              <div className="skill-item ">
+                <img src={next} />
+                <p>Next js</p>
               </div>
               <div className="skill-item ">
                 <img src={phpUnit} style={{ width: "70px", height: "40px" }} />

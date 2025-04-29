@@ -40,7 +40,9 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
       </div>
 
       <div className="card-body">
-        <h4 className="card-title mb-4">{title} </h4>
+        <h4 className="card-title mb-4">{title}   
+         
+        </h4>
 
         {/* Collapsible content */}
         <div id={id} className="card-text desc3">

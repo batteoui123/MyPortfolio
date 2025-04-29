@@ -33,15 +33,30 @@ html {
   scroll-padding-top: 75px;
 }
 
+/* Applique le fond animé à l'ensemble du body */
 body {
-  background-color: #0f1624 !important; 
+  background-color: #0f1624 !important;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  /* background-color: #121212 !important; */
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  background-color: transparent; /* Supprimer la couleur de fond unie */
 }
+
+/* Mettre à jour le style de l'élément canvas pour occuper toute la page */
+.canvas-background {
+  position: fixed;  /* Fixer la position du fond */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Prendre toute la hauteur de la page */
+  z-index: -1; /* Mettre le fond derrière le contenu */
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -599,6 +614,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+ 
 }
 
 .skill h2 {
@@ -617,6 +633,8 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 }
 
 .skill .skill-container {
+  background-color: #0f1624;
+  
   padding: 37px;
   border-radius: 35px;
   box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
@@ -767,6 +785,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 }
 
 .card-project {
+  
   width: 300px; /* Set the width you want for the card */
   transition: width 0.3s ease;
   
@@ -781,6 +800,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 
 }
 .project .container .cardList {
+  background-color: #0f1624;
   padding:37px;
   border-radius: 35px;
   box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
@@ -818,7 +838,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90deg, #13081d, #045270d5);
+  background: linear-gradient(90deg, #5c5b64, #474f63ec);
   
   
   opacity:0.9;
@@ -915,6 +935,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 
 
 .contact .container{
+  background-color: #0f1624;
   padding:37px;
   border-radius: 35px;
   box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
@@ -1184,7 +1205,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
   padding-left: 50px;
   padding-bottom: 37px;
   padding-top: 37px;
-
+  background-color: #0f1624;
   border-radius: 35px;
   box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
   4px 4px 6px rgba(94, 104, 121, 0.288);
