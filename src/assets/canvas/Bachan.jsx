@@ -52,7 +52,6 @@ const SpaceBackground = () => {
         }
       };
     };
-
     new p5(sketch, canvasRef.current);
 
     return () => {
