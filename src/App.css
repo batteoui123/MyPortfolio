@@ -831,6 +831,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 }
 
 .proj-imgbx {
+  
   position: relative;
   border-radius: 10px;
   overflow: hidden;
