@@ -831,7 +831,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 }
 
 .proj-imgbx {
-  
+
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -840,8 +840,6 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90deg, #5c5b64, #474f63ec);
-  
-  
   opacity:0.9;
   position: absolute;
   width: 100%;
