@@ -1,3 +1,49 @@
+/* Styles pour la barre de défilement */
+.scroll-progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background-color: #ddd;
+  z-index: 9999;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.scroll-progress-bar {
+
+  height: 100%;
+  background: linear-gradient(90deg, #a84cf5, #36c0f0);
+  width: 0%; /* Initialement, la barre est vide */
+  
+}
+
+/* Bouton de retour en haut */
+.scroll-to-top {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  background: linear-gradient(90deg, #a84cf5, #36c0f0);
+ 
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 60%;
+  display: none; /* Au départ, le bouton est caché */
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.scroll-to-top.show {
+  display: block; /* Montre le bouton quand l'utilisateur est en bas */
+}
+
+
+
+
+
+
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
@@ -385,7 +431,9 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 	filter: brightness(0) saturate(100%) invert(5%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
-
+.about-me{
+  width: 77%;
+}
 
 .grp-btn-banner{
   display: flex;
@@ -511,8 +559,23 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
   outline: none;
 }
 
+@media (max-width: 1200px) {
+  .about-me{
+    width: 100%;
+  }
+}
+
 /* Mobile responsiveness: On small screens, make the image move to the bottom */
+
+
+
+
 @media (max-width: 768px) {
+ 
+  .banner {
+    padding: 160px 0 20px 0;
+   
+  }
   .grp-btn-banner{
     display: flex;
     justify-content: center
@@ -561,6 +624,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
   }
 
   .btn1 {
+
     padding: 0.5rem 1rem;  /* Adjust padding */
     width: 100%;        /* Full-width button on mobile */
   }
@@ -572,14 +636,17 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
 
 /* For very small screens or phones under 576px */
 @media (max-width: 576px) {
+ 
   .grp-btn-banner{
     display: flex;
     justify-content: center
   }
   .banner button {
-    font-size: 10px;
+    font-size: 8px;
     margin-top: 30px;
     letter-spacing: 0.8px;
+   
+    
   
    
   }
@@ -597,9 +664,13 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active:hover{
   }
 
   .btn1 {
+  
     font-size: 0.9rem;  /* Adjust button font size */
     padding: 0.4rem 1.5rem;  /* Adjust padding */
+   height: 50px;
+   
   }
+ 
 }
 
 

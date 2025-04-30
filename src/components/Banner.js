@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/imgprofil.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -8,11 +8,13 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/githubFinal.svg';
+import download from '../assets/img/download.svg';
 import { HashLink } from 'react-router-hash-link';
 import { color, motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
+import { PiDownloadSimpleBold } from "react-icons/pi";
 
 
 
@@ -25,8 +27,8 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Software engineering student",
-    "Web Developer",
+    "< Software engineering student />",
+    "< Web Developer />",
 ];
 
   const period = 2000;
@@ -71,10 +73,9 @@ export const Banner = () => {
   return (
     <>
       <section className="banner " id="home">
-        <div className="container bg-dange align-items-center">
-    
-          <Row className="aligh-items-center ">
-            <Col xs={12} md={6} xl={7} className="first-cl ">
+        <div className="container  align-items-center">
+          <Row className=" d-flex  mb-2 ">
+            <Col xs={12} md={7} xl={8} className="first-cl  align-self-center ">
               <TrackVisibility>
                 {({ isVisible }) => (
                   <div
@@ -110,7 +111,7 @@ export const Banner = () => {
               <div className="social-icon  bg-succes  d-flex justify-content-start my-5">
                 <motion.a
                   href="https://www.linkedin.com/in/elbatteoui-oussama-54b59427a/"
-                  target="_blank" 
+                  target="_blank"
                   className="me-3 "
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -121,7 +122,7 @@ export const Banner = () => {
 
                 <motion.a
                   href="https://www.facebook.com/oussama.batiwi.7"
-                  target="_blank" 
+                  target="_blank"
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -131,7 +132,7 @@ export const Banner = () => {
                 </motion.a>
                 <motion.a
                   href="https://www.instagram.com/oussamaelbatteoui/"
-                  target="_blank" 
+                  target="_blank"
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -141,7 +142,7 @@ export const Banner = () => {
                 </motion.a>
                 <motion.a
                   href="https://github.com/batteoui123"
-                  target="_blank" 
+                  target="_blank"
                   className="me-3"
                   initial={{ y: "0vw" }}
                   whileInView={{ y: ["2vw", "-2vw", "0vw"] }}
@@ -152,7 +153,7 @@ export const Banner = () => {
               </div>
             </Col>
 
-            <Col xs={12} md={6} xl={5} className="bg-inf">
+            <Col xs={12} md={5} xl={4} className="">
               <TrackVisibility className="track">
                 {({ isVisible }) => (
                   <div
@@ -160,39 +161,44 @@ export const Banner = () => {
                       isVisible ? "animate__animated animate__zoomIn" : ""
                     }
                   >
-                    <img className="profil" src={headerImg} alt="Header Img" />
+                    <img
+                      className="profil  "
+                      src={headerImg}
+                      alt="Header Img"
+                    />
                   </div>
                 )}
               </TrackVisibility>
             </Col>
           </Row>
-          <Row>
+          <Row className="about-me">
             <Col xs={12} md={12} xl={12}>
               <p>
-                <span> </span> I'm a Software Engineering student at the
-                National School of Applied Sciences of Tangier (ENSAT) 🎓. I'm
-                passionate about software development and committed to creating
-                scalable, efficient, and user-friendly solutions.
+                &nbsp;&nbsp; &nbsp; I'm a <strong>Software Engineering student</strong>  at the
+                National School of Applied Sciences of Tangier (ENSAT) 🎓. I
+                have a strong passion for developing scalable and efficient
+                software solutions, always focusing on delivering high-quality
+                user experiences.
+              </p>
+
+            
+
+              <p>
+                I have gained hands-on
+                experience with technologies like <strong> React,Next js, Spring Boot,
+                and Laravel,</strong>  focusing on both front-end and back-end
+                development. I have contributed to academic projects such as
+                web platforms for activity management and freelance
+                service marketplaces, which have strengthened my
+                <strong> problem-solving </strong> abilities and improved my teamwork skills in
+                collaborative settings.
               </p>
 
               <p>
-                I've worked with technologies like
-                 Laravel,  Spring Boot, and react, gaining solid
-                experience in both front-end and back-end development. I'm eager
-                to continue expanding my skills and apply them to innovative
-                projects 🚀.
-              </p>
-
-              <p>
-               Currently in my second year, I've contributed to exciting academic projects, including a web
-                platform for managing children’s activities and a freelance
-                service marketplace, which has enhanced my coding abilities and
-                teamwork skills.
-              </p>
-
-              <p>
-                I’m always seeking new challenges 💡 and opportunities to grow
-                professionally 🌱.
+                I am always looking for new challenges and opportunities to grow
+                🌱. When I’m not coding, you’ll
+                find me exploring new technologies, reading, or engaging in
+                outdoor activities. 🚀
               </p>
 
               <div className="grp-btn-banner">
@@ -207,9 +213,10 @@ export const Banner = () => {
                 <a href="#" style={{ textDecoration: "none" }}>
                   <motion.button
                     className="btn1 justify-content-center ms-3"
-                    whileHover={{ scale: 1.2 }}
+                    whileHover={{ scale: 1.07 }}
                   >
                     <span>download cv</span>
+                    
                   </motion.button>
                 </a>
               </div>

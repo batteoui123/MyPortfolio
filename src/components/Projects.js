@@ -50,7 +50,7 @@ export const Projects = () => {
       title: "Freelance Service Marketplace",
       description: "Backend developer in a freelance service platform enabling smart matching, messaging, and real-time notifications.",
       imgUrl: projImg1,
-      githubLink:'',
+      githubLink:'https://github.com/batteoui123/Freelance-Service-Marketplace-Spring-Next',
       technologies:[spring,tailwind,next,postgre]
     },
     {
@@ -58,20 +58,31 @@ export const Projects = () => {
       title: "School Management System ",
       description: "JavaFX-based school management app with dashboards, role-based access, and student, teacher, and module tracking.",
       imgUrl: projImg2,
+      githubLink:'https://github.com/batteoui123/ScholManagement-JavaFx'  ,
       technologies:[javaFx,postgre,css]
     },
     {  
       title: "Children's Activity Management Platform",
       description: "Backend developer in a platform for managing children’s activities, enabling registration, scheduling, and notifications for all roles",
       imgUrl: projImg3,
+      githubLink:'https://github.com/batteoui123/Children-s-Activity-Management--laravel'  ,
       technologies:[laravel,postgre,vuejs,tailwind]
     },
     {
       
       title: "Medical Appointment and Records Management",
-      description: "Backend developer for a children’s activity platform, enabling role-based registration, scheduling, and notifications.",
+      description: "Backend Developer for MediCare, a web-based platform for managing medical appointments and patient records. Focused on developing role-based access, secure medical data storage, and appointment scheduling.",
       imgUrl: projImg4,
+      githubLink:'https://github.com/batteoui123/MedicalAppointmentManagement-spring'  ,
       technologies:[spring,postgre,angular]
+    },
+    {
+      
+      title: "Personal portfolio",
+      description: "Personal portfolio built with React.js, showcasing a collection of projects, skills, and achievements in a clean, interactive, and responsive layout. Focused on providing a user-friendly experience with dynamic content and smooth navigation.",
+      imgUrl: projImg4,
+      githubLink:'https://github.com/batteoui123/MedicalAppointmentManagement-spring'  ,
+      technologies:[bootstrap,react]
     },
   ];
 

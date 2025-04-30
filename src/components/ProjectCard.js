@@ -8,7 +8,7 @@ import css from "../assets/img/ProgrammingLang/css3.svg";
 import java from "../assets/img/ProgrammingLang/java.svg";
 import html from "../assets/img/ProgrammingLang/html5.svg";
 
-export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => {
+export const ProjectCard = ({ id, title, description, imgUrl,githubLink ,technologies}) => {
  
   const [open, setOpen] = useState(false);
 
@@ -36,11 +36,11 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
       </div>
 
       <div className="card-body">
-        <div className="d-flex">
+        <div className="d-flex justify-content-between">
 
 
         <h4 className="card-title mb-4 ">{title}   </h4>
-         <a>
+         <a href={githubLink}  target="_blank" className="" >
             <FaGithub size={25} color="#772fff" />
           </a>
         </div>
