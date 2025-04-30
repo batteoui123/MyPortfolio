@@ -21,7 +21,7 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
       className="card card-project box  m-3"
       initial={{ x: "-30vw" }}
       whileInView={{ x: "0vw" }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.6 }}
       style={{ width: "320px" }}
       whileHover={{ scale: 1.1 }}
     >
