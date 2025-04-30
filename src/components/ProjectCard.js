@@ -32,17 +32,19 @@ export const ProjectCard = ({ id, title, description, imgUrl ,technologies}) => 
           alt="Card image"
           style={{ height: "200px" }}
         />
-        <div className="proj-txtx">
-          <motion.a>
-            <FaGithub size={50} color="black" />
-          </motion.a>
-        </div>
+      
       </div>
 
       <div className="card-body">
-        <h4 className="card-title mb-4">{title}   
-         
-        </h4>
+        <div className="d-flex">
+
+
+        <h4 className="card-title mb-4 ">{title}   </h4>
+         <a>
+            <FaGithub size={25} color="#772fff" />
+          </a>
+        </div>
+       
 
         {/* Collapsible content */}
         <div id={id} className="card-text desc3">

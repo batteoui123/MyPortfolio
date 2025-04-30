@@ -176,15 +176,15 @@ export const Banner = () => {
               </p>
 
               <p>
-                Currently in my second year, I've worked with technologies like
-                PHP, Laravel, Java, Spring Boot, and JavaScript, gaining solid
+                I've worked with technologies like
+                 Laravel,  Spring Boot, and react, gaining solid
                 experience in both front-end and back-end development. I'm eager
                 to continue expanding my skills and apply them to innovative
                 projects 🚀.
               </p>
 
               <p>
-                I've contributed to exciting academic projects, including a web
+               Currently in my second year, I've contributed to exciting academic projects, including a web
                 platform for managing children’s activities and a freelance
                 service marketplace, which has enhanced my coding abilities and
                 teamwork skills.

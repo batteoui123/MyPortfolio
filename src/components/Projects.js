@@ -50,6 +50,7 @@ export const Projects = () => {
       title: "Freelance Service Marketplace",
       description: "Backend developer in a freelance service platform enabling smart matching, messaging, and real-time notifications.",
       imgUrl: projImg1,
+      githubLink:'',
       technologies:[spring,tailwind,next,postgre]
     },
     {
