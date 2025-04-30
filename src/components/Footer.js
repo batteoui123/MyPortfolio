@@ -15,10 +15,10 @@ export const Footer = () => {
           {/* <Col size={12} sm={6} className="text-center text-sm-end  d-flex flex-column align-items-center mt-5 "> */}
            <p>elbatteoui.oussama@etu.uae.ac.ma</p>
             <div className="social-icon  ">
-              <a href="https://www.linkedin.com/in/elbatteoui-oussama-54b59427a/" className="me-3"><img src={navIcon1} alt="Icon" /></a>
-              <a href="https://www.facebook.com/oussama.batiwi.7" className="me-3"><img src={navIcon2} alt="Icon" /></a>
-              <a href="https://www.instagram.com/oussamaelbatteoui/" className="me-3"><img src={navIcon3} alt="Icon" /></a>
-              <a href="https://github.com/batteoui123" className="me-3"><img className="bg-dange" style={{width:'20px'}} src={navIcon4} alt="Icon" /></a>
+              <a href="https://www.linkedin.com/in/elbatteoui-oussama-54b59427a/"  target="_blank" className="me-3"><img src={navIcon1} alt="Icon" /></a>
+              <a href="https://www.facebook.com/oussama.batiwi.7"  target="_blank" className="me-3"><img src={navIcon2} alt="Icon" /></a>
+              <a href="https://www.instagram.com/oussamaelbatteoui/"  target="_blank" className="me-3"><img src={navIcon3} alt="Icon" /></a>
+              <a href="https://github.com/batteoui123" target="_blank"  className="me-3"><img className="bg-dange" style={{width:'20px'}} src={navIcon4} alt="Icon" /></a>
             </div>
             <p className="fw-bold ">Copyright 2025. All Rights Reserved</p>
           

@@ -123,7 +123,7 @@ export const NavBar = () => {
                     
                 
                 >
-                  Aboute me
+                  About me
                 </motion.a>
               </motion.li>
 

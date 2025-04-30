@@ -210,7 +210,7 @@ export const Banner = () => {
                     <span className="">contact me</span>
                   </motion.button>
                 </a>
-                <a href="#" style={{ textDecoration: "none" }}>
+                <a href="https://drive.google.com/file/d/1r2Fg0z5O_v6OycoHMvQgVjBcEVGpce7W/view?usp=drive_link" target="_blank" style={{ textDecoration: "none" }}>
                   <motion.button
                     className="btn1 justify-content-center ms-3"
                     whileHover={{ scale: 1.07 }}

@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/Projects/spring.png";
 import projImg2 from "../assets/img/Projects/javafx.png";
 import projImg3 from "../assets/img/Projects/laravel.png";
 import projImg4 from "../assets/img/Projects/spring2.png";
+import projImg5 from "../assets/img/Projects/portfolio.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -80,8 +81,8 @@ export const Projects = () => {
       
       title: "Personal portfolio",
       description: "Personal portfolio built with React.js, showcasing a collection of projects, skills, and achievements in a clean, interactive, and responsive layout. Focused on providing a user-friendly experience with dynamic content and smooth navigation.",
-      imgUrl: projImg4,
-      githubLink:'https://github.com/batteoui123/MedicalAppointmentManagement-spring'  ,
+      imgUrl: projImg5,
+      githubLink:'https://github.com/batteoui123/MyPortfolio'  ,
       technologies:[bootstrap,react]
     },
   ];
